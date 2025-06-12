@@ -1,0 +1,50 @@
+name: mer_chap
+description: "Prévisions météo et marines pour les côtes de l’Afrique de l’Ouest."
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State Management
+  flutter_riverpod: ^2.4.9
+
+  # Cartographie & Géolocalisation
+  google_maps_flutter: ^2.5.3
+  geolocator: ^11.0.0
+
+  # Réseau & Données
+  http: ^1.1.2
+  dio: ^5.4.0 # Un client HTTP puissant, utile pour les requêtes complexes
+
+  # Stockage Local
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  path_provider: ^2.1.1
+
+  # Utilitaires
+  intl: ^0.19.0 # Pour le formatage des dates et des nombres
+  flutter_dotenv: ^5.1.0 # Pour sécuriser nos clés API
+
+  # Icônes & UI
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  hive_generator: ^2.0.1
+  build_runner: ^2.4.8
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+
+  # Pour utiliser nos variables d'environnement (clés API)
+  assets:
+    - .env
